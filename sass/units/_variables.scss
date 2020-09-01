@@ -1,0 +1,19 @@
+// цвет основной текста #212121
+// вторичный цвет текста #757575
+// вторичный цвет фона, цвет соцсетей у команды #AFB1B8
+
+// белый #FFFFFF
+// акцент #2196F3
+
+$primary-text-color: #757575;
+$primary-white-color: #ffffff;
+$title-text-color: #212121;
+$accent-color: #2196f3;
+$accent-grey: #f5f4fa;
+$secondary-color: #afb1b8;
+
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-values: 250ms $timing-function;
+
+$font-main: "Roboto", "Verdana", "Tahoma", sans-serif;
+$font-logo: Raleway, sans-serif;

@@ -1,0 +1,28 @@
+.clients-list {
+    @extend %flex-item-centered;
+    padding-left: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+  
+    .item .clients-logos {
+      @extend %flex-item-centered;
+      justify-content: center;
+      border: solid 1px $secondary-color;
+      border-radius: 4px;
+      width: 170px;
+      height: 90px;
+      fill: $secondary-color;
+      transition: fill $transition-values, border $transition-values;
+  
+      &:hover,
+      &:focus {
+        fill: $accent-color;
+        border: solid 1px $accent-color;
+        outline: none;
+      }
+    }
+  
+    .item + .item {
+      margin-left: 30px;
+    }
+  }

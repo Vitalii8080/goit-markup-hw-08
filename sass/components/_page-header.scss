@@ -1,0 +1,95 @@
+.page-header {
+    border-bottom: solid 1px $accent-grey;
+  }
+  
+  .nav-address {
+    @extend %flex-item-centered;
+  
+    .logo-header {
+      color: black;
+      font-family: $font-logo;
+      font-size: 26px;
+      font-weight: bold;
+  
+      .logo-web {
+        color: $accent-color;
+      }
+    }
+  }
+  
+  .site-nav {
+    @extend %flex-item-centered;
+    margin-left: 85px;
+  
+    .item .current::after {
+      position: absolute;
+  
+      height: 4px;
+      width: 100%;
+  
+      left: 0;
+      bottom: 0;
+      display: block;
+      content: "";
+      background-color: $accent-color;
+      border-radius: 2px;
+  
+      opacity: 1;
+    }
+  
+    .item .nav-link {
+      position: relative;
+      display: inline-flex;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      color: $title-text-color;
+      font-weight: 500;
+      transition: color $transition-values;
+  
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+  
+    .item .current {
+      color: $accent-color;
+    }
+  
+    .item + .item {
+      margin-left: 52px;
+    }
+  }
+  
+  .address {
+    @extend %flex-item-centered;
+    margin-left: auto;
+  
+    .item .icon-header {
+      fill: currentColor;
+      margin-right: 10px;
+      transition: fill $transition-values;
+    }
+  
+    .item .icon-header:hover {
+      fill: $accent-color;
+    }
+  
+    .item + .item {
+      margin-left: 30px;
+    }
+  
+    .link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-style: inherit;
+      letter-spacing: 0.02em;
+      font-weight: 500;
+      transition: color $transition-values;
+  
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+  }

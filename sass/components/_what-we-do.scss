@@ -1,0 +1,28 @@
+.what-we-do {
+    @extend %flex-item-centered;
+    padding-left: 0px;
+  
+    .item {
+      position: relative;
+  
+      .title {
+        position: absolute;
+        width: 370px;
+  
+        bottom: 0;
+        right: 0;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: $primary-white-color;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: rgba(47, 48, 58, 0.8);
+      }
+    }
+  
+    .item + .item {
+      margin-left: 30px;
+    }
+  }

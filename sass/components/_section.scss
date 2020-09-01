@@ -1,0 +1,16 @@
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  
+    &-title {
+    padding-bottom: 50px;
+    color: $title-text-color;
+    text-align: center;
+    font-size: 36px;
+    }
+  
+    &-without-padding-bottom {
+    padding-top: 94px;
+    padding-bottom: 0px;
+    }
+  }

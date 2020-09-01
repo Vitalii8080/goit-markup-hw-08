@@ -1,0 +1,39 @@
+.feature-list {
+    @extend %flex-item-centered;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    list-style: none;
+  
+    .item + .item {
+      margin-left: 30px;
+    }
+  
+    .title {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: $title-text-color;
+      text-transform: uppercase;
+    }
+  
+    p {
+      margin-bottom: 0px;
+      line-height: 1.7;
+      width: 270px;
+    }
+  
+    .background-icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      width: 270px;
+      height: 120px;
+      background-color: $accent-grey;
+  
+      .feature-icon {
+        width: 70px;
+        height: 70px;
+        background-color: $accent-grey;
+      }
+    }
+  }
