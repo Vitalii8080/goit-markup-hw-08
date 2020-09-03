@@ -1,7 +1,27 @@
 .footer {
     background-color: #2f303a;
   }
+  .address-phone-join-subscribe {
+    @extend %flex-item-centered;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
   
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+      align-items: baseline;
+    }
+  }
+
+
+  .logo-address-join-container {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+
   .address-phone-join {
     display: flex;
     padding-top: 60px;
@@ -9,25 +29,25 @@
   }
   
   .logo-address {
-    margin-right: 69px;
+    text-align: center;
   
-    .logo-footer {
-      color: $primary-white-color;
-      font-family: $font-logo;
-      font-size: 26px;
-      font-weight: bold;
-      line-height: 1.1;
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+      margin-right: 69px;
+    }  
   
-      .logo-web {
-        color: $accent-color;
-      }
-    }
+    
   
     .address-footer {
-      padding-top: 20px;
+      margin-top: 20px;
+      margin-bottom: 60px;
       color: rgba(255, 255, 255, 0.6);
       font-style: inherit;
-      line-height: 1.71;
+      line-height: 2;
+
+      @media screen and (min-width: $desktop) {
+        margin-bottom: 0px;
+      }
   
       .physical-address {
         color: $primary-white-color;
@@ -36,9 +56,18 @@
   }
   
   .join-container {
-    padding-top: 12px;
-    margin-right: 94px;
+    text-align: center;
+    
+    @media screen and (min-width: $tablet) {
+      padding-top: 5px;
+      margin-left: 165px;
+    }
   
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+      padding-top: 12px;
+      margin-left: 0px;
+    }
     .join {
       color: $primary-white-color;
       text-transform: uppercase;
@@ -46,7 +75,6 @@
   
     .social-network-list-footer {
       @extend %flex-item-centered;
-      justify-content: center;
       padding-left: 0px;
       margin-top: 20px;
     }
@@ -77,9 +105,24 @@
   }
   
   .subscribe-container {
+    width: 100%;
+  max-width: 450px;
+  text-align: center;
+  margin-top: 60px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0px;
+  }
+
+  @media screen and (min-width: $desktop) {
     padding-top: 12px;
+    text-align: left;
+    margin-left: 94px;
+    max-width: 570px;
+  }
   
     .subscribe {
+      align-items: center;
       padding-bottom: 20px;
       color: $primary-white-color;
       text-transform: uppercase;

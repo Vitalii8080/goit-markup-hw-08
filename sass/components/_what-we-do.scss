@@ -1,10 +1,16 @@
+.what-we-do-section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
 .what-we-do {
-    @extend %flex-item-centered;
-    padding-left: 0px;
-  
-    .item {
-      position: relative;
-  
+  @extend %flex-item-centered;
+  padding-left: 0px;
+
+  .item {
+    position: relative;
+    
       .title {
         position: absolute;
         width: 370px;

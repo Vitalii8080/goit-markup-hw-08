@@ -1,25 +1,98 @@
 .page-header {
+    position: relative;
     border-bottom: solid 1px $accent-grey;
-  }
+  
   
   .nav-address {
     @extend %flex-item-centered;
-  
-    .logo-header {
-      color: black;
-      font-family: $font-logo;
-      font-size: 26px;
-      font-weight: bold;
-  
-      .logo-web {
-        color: $accent-color;
-      }
+    justify-content: space-between;
+    min-height: 60px;
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      height: 80px;
     }
   }
-  
+}
+
+.menu-button {
+  background-color: $primary-white-color;
+  width: 40px;
+  height: 40px;
+  border: none;
+  fill: #000000;
+
+  &:hover {
+    fill: $accent-color;
+  }
+
+
+  .icon-close-menu {
+    display: none;
+  }
+
+  &.is-open .icon-close-menu {
+    display: block;
+    fill: black;
+
+    &:hover {
+      fill: $accent-color;
+    }
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.menu-container {
+  @media screen and (max-width: 767px) {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 101%;
+    left: 0;
+    width: 100%;
+    padding: 60px 0px;
+    text-align: center;
+    font-size: 18px;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+}
+
+
   .site-nav {
-    @extend %flex-item-centered;
-    margin-left: 85px;
+    font-weight: 500;
+    
+    @media screen and (max-width: 767px) {
+      .item:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+      margin-left: 81px;
+  
+      .item + .item {
+        margin-left: 50px;
+      }
+    }
   
     .item .current::after {
       position: absolute;
@@ -40,51 +113,81 @@
     .item .nav-link {
       position: relative;
       display: inline-flex;
-      padding-top: 32px;
-      padding-bottom: 32px;
+      
       color: $title-text-color;
-      font-weight: 500;
       transition: color $transition-values;
   
       &:hover,
       &:focus {
         color: $accent-color;
       }
+    
+     @media screen and (min-width: $tablet) {
+      padding-top: 32px;
+      padding-bottom: 32px;
     }
+  }
+  .item .current {
+    color: $accent-color;
   
-    .item .current {
-      color: $accent-color;
-    }
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 8px;
+  }
+ }
+} 
+
+
+
+    
   
+.address {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+
     .item + .item {
-      margin-left: 52px;
+      margin-top: 16px;
     }
   }
   
-  .address {
-    @extend %flex-item-centered;
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    
+      .item + .item {
+      margin-top: 10px;
+    }
+  }
+
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
     margin-left: auto;
-  
-    .item .icon-header {
-      fill: currentColor;
-      margin-right: 10px;
-      transition: fill $transition-values;
-    }
-  
-    .item .icon-header:hover {
-      fill: $accent-color;
-    }
-  
+
     .item + .item {
       margin-left: 30px;
     }
+  }
+    .item .icon-header {
+      fill: $accent-color;
+      margin-right: 10px;
+      transition: fill $transition-values;
+
+     &:hover {
+       fill: $accent-color;
+     }
+    }
+  
+    
   
     .link {
-      padding-top: 32px;
-      padding-bottom: 32px;
+      display: inline-flex;
+      align-items: center;
       font-style: inherit;
-      letter-spacing: 0.02em;
-      font-weight: 500;
       transition: color $transition-values;
   
       &:hover,

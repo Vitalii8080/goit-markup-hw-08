@@ -1,16 +1,38 @@
 .section {
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
-  
-    &-title {
-    padding-bottom: 50px;
+  }
+
+  &-title {
     color: $title-text-color;
     text-align: center;
-    font-size: 36px;
+
+    @media screen and (max-width: 1199px) {
+      padding-bottom: 30px;
+      font-size: 28px;
     }
-  
-    &-without-padding-bottom {
-    padding-top: 94px;
-    padding-bottom: 0px;
+
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 50px;
+      font-size: 36px;
     }
   }
+
+  &-feature-list {
+    @media screen and (max-width: 1199px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 94px;
+      padding-bottom: 0px;
+    }
+  }
+}

@@ -1,15 +1,29 @@
 .filters {
     display: flex;
-    justify-content: center;
+    
     padding-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      justify-content: start;
+
+      .item {
+        margin-bottom: 15px;
+        margin-right: 8px;
+      }
+    }
+  
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
   
     .item + .item {
       margin-left: 8px;
     }
   }
-  
+}
+
   .bfilters {
     border: none;
     padding: 6px 23px;

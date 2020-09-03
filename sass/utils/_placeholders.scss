@@ -1,0 +1,15 @@
+%list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+%link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+%flex-item-centered {
+  display: flex;
+  align-items: center;
+}

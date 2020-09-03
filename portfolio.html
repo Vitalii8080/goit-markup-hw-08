@@ -16,7 +16,7 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!--  Шапка сайта -->
 
   <header class="page-header">
     <div class="container nav-address">
@@ -26,7 +26,14 @@
        <a href="./index.html" class="logo-header">
        <span class="logo-web">Web</span> Studio
        </a>
-    
+       <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+        <svg width="24" height="16" aria-label="Переключатель мобильного меню">
+          <use class="icon-close-menu" href="./Images/sprite.svg#icon-close_form"></use>
+          <use class="icon-menu" href="./Images/sprite.svg#icon-menu"></use>
+        </svg>
+      </button>
+      
+      <div class="menu-container" id="menu-container" data-menu>
        <ul class="site-nav list">
          
         <li class="item"><a href="./index.html" class="nav-link ">Студия</a></li>
@@ -37,7 +44,7 @@
         <li class="item"> <a href="#" class="nav-link"> Контакты</a>
         </li>
       </ul>
-    </nav>
+    
 
       <!-- contacts -->
           
@@ -59,7 +66,9 @@
            </li>
           </ul>
         </div>
-    </header>
+    </nav>
+  </div>
+ </header>
     
     <!-- Уникальный контент -->
 
@@ -86,14 +95,22 @@
             </ul>
            </nav>
           
-          
+          <!-- Список работ -->
 
            <ul class="works-list">
 
              <li class="flex-element"> 
                <a href="#" class="link">
                  <div class="overlay">
-               <img class="card-image" src="./images/img-1.jpg" alt="#"/>
+                  <img srcset="
+                  ./images/Portfolio-images/1/354.jpg     354w,
+                  ./images/Portfolio-images/1/370.jpg     370w,
+                  ./images/Portfolio-images/1/img.jpg    450w,
+                  ./images/Portfolio-images/1/354@2x.jpg  708w,    
+                  ./images/Portfolio-images/1/370@2x.jpg  740w,
+                  ./images/Portfolio-images/1/img@2x.jpg 900w
+                               " src="./images/Portfolio-images/1/img.jpg " alt="Веб-сайт с картинками"
+                   sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 479px) 450px" />
                  <p class="works-description">
                 Технокряк это современная площадка распространения коронавируса.
                 Компании используют эту платформу для цифрового шпионажа и атак на защищённые
@@ -109,7 +126,41 @@
             <li class="flex-element">
               <a href="#" class="link">
                 <div class="overlay">
-                  <img src="./images/img-2.jpg" alt="#" />
+                  <img srcset="
+                   ./Images/project/2/354.jpg     354w,
+                   ./Images/project/2/370.jpg     370w,
+                   ./Images/project/2/img.jpg    450w,
+                   ./Images/project/2/354@2x.jpg  708w,    
+                   ./Images/project/2/370@2x.jpg  740w,
+                   ./Images/project/2/img@2x.jpg 900w
+                   " src="./Images/project/2/img.jpg " alt="Парни играют в футбол"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 479px) 450px" />
+                  <p class="works-description">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="title-product">
+                  <h2 class="title">Постер <span lang="en">New Orlean vs Golden Star</span>
+                  </h2>
+                  <p class="product">Дизайн</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="flex-element">
+              <a href="#" class="link">
+                <div class="overlay">
+                  <img srcset="
+                   ./Images/project/3/354.jpg     354w,
+                   ./Images/project/3/370.jpg     370w,
+                   ./Images/project/3/img.jpg    450w,
+                   ./Images/project/3/354@2x.jpg  708w,    
+                   ./Images/project/3/370@2x.jpg  740w,
+                   ./Images/project/3/img@2x.jpg 900w
+                   " src="./Images/project/3/img.jpg " alt="Логотип ресторана с рыбой"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 479px) 450px" />
                   <p class="works-description">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -126,7 +177,15 @@
             <li class="flex-element">
               <a href="#" class="link">
                 <div class="overlay">
-                  <img src="./images/img-3.jpg" alt="#" />
+                  <img srcset="
+                  ./Images/project/4/354.jpg     354w,
+                  ./Images/project/4/370.jpg     370w,
+                  ./Images/project/4/img.jpg    450w,
+                  ./Images/project/4/354@2x.jpg  708w,    
+                  ./Images/project/4/370@2x.jpg  740w,
+                  ./Images/project/4/img@2x.jpg 900w
+                  " src="./Images/project/4/img.jpg " alt="Наушники"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 479px) 450px" />
                   <p class="works-description">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -134,7 +193,32 @@
                   </p>
                 </div>
                 <div class="title-product">
-                  <h2 class="title">Ресторан <span lang="en">Seafood</span></h2>
+                  <h2 class="title">Проект <span lang="en">Prime</span></h2>
+                  <p class="product">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="flex-element">
+              <a href="#" class="link">
+                <div class="overlay">
+                  <img srcset="
+                   ./Images/project/5/354.jpg     354w,
+                   ./Images/project/5/370.jpg     370w,
+                   ./Images/project/5/img.jpg    450w,
+                   ./Images/project/5/354@2x.jpg  708w,    
+                   ./Images/project/5/370@2x.jpg  740w,
+                   ./Images/project/5/img@2x.jpg 900w
+                   " src="./Images/project/5/img.jpg " alt="Кубики"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 479px) 450px" />
+                  <p class="works-description">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+                <div class="title-product">
+                  <h2 class="title">Проект <span lang="en">Boxes</span></h2>
                   <p class="product">Приложение</p>
                 </div>
               </a>
@@ -143,7 +227,15 @@
             <li class="flex-element">
               <a href="#" class="link">
                 <div class="overlay">
-                  <img src="./images/img-4.jpg" alt="#" />
+                  <img srcset="
+                ./Images/project/6/354.jpg     354w,
+                ./Images/project/6/370.jpg     370w,
+                ./Images/project/6/img.jpg    450w,
+                ./Images/project/6/354@2x.jpg  708w,    
+                ./Images/project/6/370@2x.jpg  740w,
+                ./Images/project/6/img@2x.jpg 900w
+                " src="./Images/project/6/img.jpg " alt="Монитор"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 479px) 450px" />
                   <p class="works-description">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -151,8 +243,8 @@
                   </p>
                 </div>
                 <div class="title-product">
-                  <h2 class="title">Ресторан <span lang="en">Seafood</span></h2>
-                  <p class="product">Приложение</p>
+                  <h2 class="title">Inspiration has no Borders</h2>
+                  <p class="product">Веб-сайт</p>
                 </div>
               </a>
             </li>
@@ -160,7 +252,15 @@
             <li class="flex-element">
               <a href="#" class="link">
                 <div class="overlay">
-                  <img src="./images/img-5.jpg" alt="#" />
+                  <img srcset="
+                  ./Images/project/7/354.jpg     354w,
+                  ./Images/project/7/370.jpg     370w,
+                  ./Images/project/7/img.jpg    450w,
+                  ./Images/project/7/354@2x.jpg  708w,    
+                  ./Images/project/7/370@2x.jpg  740w,
+                  ./Images/project/7/img@2x.jpg 900w
+                  " src="./Images/project/7/img.jpg " alt="Развернутая книга"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 479px) 450px" />
                   <p class="works-description">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -168,8 +268,8 @@
                   </p>
                 </div>
                 <div class="title-product">
-                  <h2 class="title">Ресторан <span lang="en">Seafood</span></h2>
-                  <p class="product">Приложение</p>
+                  <h2 class="title">Издание Limited Edition</h2>
+                  <p class="product">Дизайн</p>
                 </div>
               </a>
             </li>
@@ -177,7 +277,15 @@
             <li class="flex-element">
               <a href="#" class="link">
                 <div class="overlay">
-                  <img src="./images/img-6.jpg" alt="#" />
+                  <img srcset="
+                   ./Images/project/8/354.jpg     354w,
+                   ./Images/project/8/370.jpg     370w,
+                   ./Images/project/8/img.jpg    450w,
+                   ./Images/project/8/354@2x.jpg  708w,    
+                   ./Images/project/8/370@2x.jpg  740w,
+                   ./Images/project/8/img@2x.jpg 900w
+                    " src="./Images/project/8/img.jpg " alt="Брелок с LAB EL TAG"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 479px) 450px" />
                   <p class="works-description">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -185,8 +293,8 @@
                   </p>
                 </div>
                 <div class="title-product">
-                  <h2 class="title">Ресторан <span lang="en">Seafood</span></h2>
-                  <p class="product">Приложение</p>
+                  <h2 class="title">Проект LAB</h2>
+                  <p class="product">Маркетинг</p>
                 </div>
               </a>
             </li>
@@ -194,7 +302,15 @@
             <li class="flex-element">
               <a href="#" class="link">
                 <div class="overlay">
-                  <img src="./images/img-7.jpg" alt="#" />
+                  <img srcset="
+                   ./Images/project/9/354.jpg     354w,
+                   ./Images/project/9/370.jpg     370w,
+                   ./Images/project/9/img.jpg    450w,
+                   ./Images/project/9/354@2x.jpg  708w,    
+                   ./Images/project/9/370@2x.jpg  740w,
+                   ./Images/project/9/img@2x.jpg 900w
+                   " src="./Images/project/9/img.jpg " alt="Раскрытый ноутбук"
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 479px) 450px" />
                   <p class="works-description">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -202,41 +318,7 @@
                   </p>
                 </div>
                 <div class="title-product">
-                  <h2 class="title">Ресторан <span lang="en">Seafood</span></h2>
-                  <p class="product">Приложение</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="flex-element">
-              <a href="#" class="link">
-                <div class="overlay">
-                  <img src="./images/img-8.jpg" alt="#" />
-                  <p class="works-description">
-                    Технокряк это современная площадка распространения
-                    коронавируса. Компании используют эту платформу для
-                    цифрового шпионажа и атак на защищённые сервера конкурентов.
-                  </p>
-                </div>
-                <div class="title-product">
-                  <h2 class="title">Ресторан <span lang="en">Seafood</span></h2>
-                  <p class="product">Приложение</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="flex-element">
-              <a href="#" class="link">
-                <div class="overlay">
-                  <img src="./images/img-9.jpg" alt="#" />
-                  <p class="works-description">
-                    Технокряк это современная площадка распространения
-                    коронавируса. Компании используют эту платформу для
-                    цифрового шпионажа и атак на защищённые сервера конкурентов.
-                  </p>
-                </div>
-                <div class="title-product">
-                  <h2 class="title">Ресторан <span lang="en">Seafood</span></h2>
+                  <h2 class="title">Growing Business</h2>
                   <p class="product">Приложение</p>
                 </div>
               </a>
@@ -249,7 +331,8 @@
         <!-- footer -->
 
         <footer class="footer">
-          <div class="container address-phone-join">
+          <div class="container address-phone-join-subscribe">
+            <div class="logo-address-join-container">
             <div class="logo-address">
               <a href="./index.html" class="logo-footer">
                 <span class="logo-web">Web</span> Studio</a>
@@ -295,81 +378,31 @@
                 </li>
             </ul>
           </div>  
-        
+        </div>
+
           <div class="subscribe-container">
             <b class="subscribe">Подпишитесь на рассылку</b>
           
               <form>
               <div class="form-subscribe">
                 <label for="user-mails"></label>
-                <input type="emails" id="user-mails" placeholder="E-mail" autofocus/>
-        
+                <input type="email" name="user-mails" id="user-mails" placeholder="E-mail" autofocus/>
+              <div>
               <button type="submit" class="button-subscribe">Подписаться
-                <span><img class="icon-send" src="./images/logo/icon-send.svg" alt="icon-send">
-                   </span>
-              </button>
+                <span><svg class="icon-send" width="24px" height="24px">
+                  <use href="./Images/sprite.svg#icon-icon_send"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+
               </form>
             </div>
           </div>
         </div>
         </footer>
-        <div class="backdrop is-hidden" data-modal>
-          <div class="modal">
-            <div>
-              <button data-modal-close class="button-close">
-              <svg class="icon-close" width="11px" height="11px">
-                <use href="./Images/sprite.svg#icon-close_form"></use>
-              </svg></button>
-            </div>
-            <p class="left-data">Оставьте свои данные, мы вам перезвоним</p>
-          
-              <form class="form" autocomplete="off">
-                <div class="form-field">
-                  <input type="text" class="form-input" name="name" id="name" placeholder=" " />
-                  <label for="name" class="form-label">Имя</label>
-                    <svg class="icon-form" width="12px" height="12px">
-                      <use href="./Images/sprite.svg#icon-name_form"></use> 
-                    </svg>
-                </div>
-              
-                <div class="form-field">
-                  <input type="tel" class="form-input" name="telephone" id="telephone" placeholder=" " />
-                  <label for="telephone" class="form-label">Телефон</label>
-                    <svg class="icon-form" width="13px" height="13px">
-                      <use href="./Images/sprite.svg#icon-phome_form"></use> 
-                    </svg>
-                </div>
-          
-                <div class="form-field">
-                  <input type="email" class="form-input" name="mail" id="mail" placeholder=" " />
-                  <label for="mail" class="form-label">Почта</label>
-                    <svg class="icon-form" width="15px" height="12px">
-                      <use href="./Images/sprite.svg#icon-mail_form"></use> 
-                    </svg>
-                </div>
-          
-                <div>
-                <textarea name="comment" id="comment" placeholder=" "></textarea>
-                  <label for="comment" class="form-label-comment">Комментарий</label>
-                </div>
-          
-                <div class="agree">
-                  <label class="agree-label">
-          <input class="checkbox" type="checkbox">
-          <span class="icon-checkbox"></span>
-                 Соглашаюсь с рассылкой и принимаю <a href=""><span class="conditions">Условия договора</span></a>
-          </label>
-          </div>
-          
-                <div class="button-centered">
-            <button type="submit" class="button-sent">Отправить</button>
-          </div>
-          
-            </form>
-          </div>
-          </div>
-          
-          <script src="./js/modal.js"></script>
+        
+         <script src="/js/menu.js"></script>
             </body>
           </html>
         
