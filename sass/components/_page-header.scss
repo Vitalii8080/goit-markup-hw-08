@@ -173,26 +173,26 @@
     }
   }
     .item .icon-header {
-      fill: $accent-color;
+      fill: currentColor;
       margin-right: 10px;
       transition: fill $transition-values;
 
      &:hover {
-       fill: $accent-color;
+       fill: currentColor;
      }
     }
   
     
   
     .link {
-      display: inline-flex;
-      align-items: center;
       font-style: inherit;
       transition: color $transition-values;
+      display: inline-flex;
+      align-items: center;
   
       &:hover,
       &:focus {
-        color: $accent-color;
+        color: currentColor;
       }
     }
   }
