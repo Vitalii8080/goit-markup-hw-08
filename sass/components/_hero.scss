@@ -6,12 +6,12 @@
     padding-top: 70px;
     background-position: center;
     background-size: cover;
-    background-image: $hero-bg-color,url("../images/Hero/hero.jpg");
+    background-image: $hero-bg-color,url("/images/Hero/hero.jpg");
     
     @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: $hero-bg-color, url("../images/Hero/hero@2x.jpg");
+    background-image: $hero-bg-color, url("/images/Hero/hero-tabl@2x.jpg");
   }
 
   @media screen and (min-width: 481px) {
